@@ -33,16 +33,15 @@ negative = [
 
 def game():
     while True:
-        input("(?) Задайте вопрос Великому Оракулу:\n [Q]: ")
+        user_input = input("(?) Задайте вопрос Великому Оракулу (чтобы выйти, введите: выход):\n [Q]: ")
+        if user_input.lower() == 'да':
+            print("Возвращайся, если возникнут вопросы!")
+            break
+            
         choice = random.choice([positive, good, neutral, negative])
         answer = choice[random.randint(0, len(choice) - 1)]
         print(f" [A]: {answer}")
-
-        on_exit = input("Хотите задать еще вопрос? (Да / Нет)\n>>>").strip().lower()
-        if on_exit == "нет":
-            print("Возвращайся, если возникнут вопросы!")
-            break
-
+            
 
 if __name__ == "__main__":
     game()
