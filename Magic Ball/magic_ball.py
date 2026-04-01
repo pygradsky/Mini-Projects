@@ -34,7 +34,7 @@ negative = [
 def game():
     while True:
         user_input = input("(?) Задайте вопрос Великому Оракулу (чтобы выйти, введите: выход):\n [Q]: ")
-        if user_input.lower() == 'да':
+        if user_input.lower() == 'выход':
             print("Возвращайся, если возникнут вопросы!")
             break
             
